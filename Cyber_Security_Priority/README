@@ -1,0 +1,98 @@
+# Rankings of Priority for Cybersecurity Among Respondents
+
+## Project overview
+
+This project analyses UK survey data to understand how different demographic groups prioritise cyber security in their personal lives. The focus is on transforming a complex government survey cross-tabulation into a clean, reporting-ready dataset and using SQL to generate clear, decision-focused insights.
+
+The analysis is designed to mirror the type of work carried out in **Risk Data & Reporting** and **Data & Performance Analyst** roles within the public sector.
+
+---
+
+## Objectives
+
+* Clean and normalise survey data originally presented as Excel cross-tabs
+* Create a single master fact table suitable for SQL and BI tools
+* Use SQL to rank and compare cyber security priority across demographic groups
+* Apply reporting rules (e.g. minimum base sizes) to ensure robust insights
+
+---
+
+## Data
+
+* **Source:** UK cyber security attitudes survey (aggregated, weighted results)
+* **Unit of analysis:** Demographic group (e.g. age, gender, education)
+* **Key metric:** Percentage of respondents rating cyber security as a *fairly or very high priority*
+
+The final dataset is stored as `Master_Tbl.csv` and contains one row per demographic segment.
+
+### Final table structure
+
+* `demographic_type` – Category of demographic (Age, Gender, Education)
+* `demographic_group` – Specific group within the category
+* `high_priority_pct` – Percentage rating cyber security as high priority
+* `weighted_base` – Weighted sample size for the group
+* `Priority_strength` – Derived categorisation of priority level
+
+---
+
+## Methodology
+
+1. **Data cleaning (Python / pandas)**
+
+   * Removed Excel-generated artefacts (empty columns, helper columns)
+   * Dropped non-analytical and blank rows
+   * Validated completeness of KPI and base values
+
+2. **Data modelling**
+
+   * Structured the cleaned data as a single fact table (`Master_Tbl`)
+   * Designed the table to be compatible with SQL querying and BI tools
+
+3. **SQL analysis (SQLite via Python)**
+
+   * Used `WHERE` clauses to isolate specific demographics (e.g. age groups)
+   * Applied base-size thresholds to exclude statistically unreliable segments
+   * Ranked demographic groups by cyber security priority
+   * Used `GROUP BY` to summarise performance across demographic types
+   * Demonstrated dimensional modelling through a simple `JOIN`
+
+---
+
+## Key findings
+
+* Cyber security is a high personal priority for the majority of respondents, but prioritisation varies across demographic groups
+* Older age groups consistently report higher prioritisation than younger groups
+* Education level shows variation, suggesting differences in awareness or exposure
+* Applying minimum base-size rules improves the reliability of reported insights
+
+---
+
+## Tools and technologies
+
+* Excel
+* Python (pandas)
+* SQL (SQLite executed within a Python environment)
+* Kaggle Notebook
+
+---
+
+## Repository contents
+
+* `Cybersecurity_Priority.ipynb` – Kaggle notebook containing data cleaning, SQL analysis, and commentary
+* `Master_Tbl.csv` – Cleaned, analysis-ready dataset
+* `screenshots/` – Key outputs used for quick review in this README
+* `README.md` – Project documentation
+
+---
+
+## Next steps
+
+* Incorporate additional survey questions (e.g. perceived cyber risk, confidence in government response)
+* Expand the fact table to support multi-metric reporting
+* Build an interactive Power BI dashboard using the same data model
+
+---
+
+## Author
+
+This project was created as part of a professional analytics portfolio, with a focus on public-sector risk, assurance, and performance reporting.
