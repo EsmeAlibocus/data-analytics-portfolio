@@ -1,0 +1,86 @@
+# Fashion Pricing & Value Analysis
+
+## Project Overview
+This project analyses fashion product data to evaluate pricing strategies, customer-perceived quality, and value positioning across brands and categories. The goal is to understand whether higher-priced products deliver better quality and to identify opportunities for better value offerings.
+
+The analysis is designed to support business decision-making in pricing, merchandising, and brand positioning and will be visualised using **Power BI**.
+
+---
+
+## Business Questions
+The project focuses on the following key business questions:
+
+1. Does paying more for fashion products result in better customer-perceived quality?
+2. Which brands offer the best value products based on price and customer ratings?
+3. Which product categories are most affected by overpricing?
+4. Are premium-priced products consistently delivering higher customer satisfaction?
+5. How is product availability distributed across sizes and categories?
+6. Where do pricing inefficiencies present opportunities for improvement?
+
+---
+
+## Dataset
+**Source:** Kaggle – Fashion Products Dataset  
+The dataset includes product-level information such as:
+- Product and brand details
+- Category, size, and colour
+- Price and customer ratings
+- User IDs
+
+---
+
+## Data Preparation
+The dataset was cleaned and enhanced using Excel prior to visualisation. Key preparation steps included:
+- Creating price tiers (Budget, Mid, Premium) based on product price
+- Engineering flag variables to identify:
+  - Best value products (high rating, lower price)
+  - Overpriced products (high price, low rating)
+- Validating rating distributions and removing inconsistencies
+
+---
+
+## Key Metrics & Features
+- **Average Rating**
+- **Average Price**
+- **Price Tier (Budget / Mid / Premium)**
+- **Best Value Flag**
+- **Overpriced Flag**
+- **Product Count by Brand, Category, and Size**
+
+---
+
+## Key Insights
+- Higher prices do not significantly correlate with higher customer ratings.
+- Premium products show only marginally higher average ratings compared to budget products.
+- Certain high-volume products (e.g. T-shirts and shoes) show higher levels of overpricing.
+- Some brands consistently offer better value, balancing affordability with customer satisfaction.
+- Product availability across sizes is evenly distributed, indicating balanced inventory coverage.
+
+---
+
+## Power BI Dashboard (In Progress)
+The Power BI dashboard will include:
+- Brand positioning (price vs rating)
+- Overpriced vs best-value product analysis
+- Price tier performance comparison
+- Category-level pricing insights
+- Interactive filters by brand, category, and price tier
+
+---
+
+## Tools Used
+- Excel (data cleaning, feature engineering, pivot analysis)
+- Power BI (dashboard design and visualisation)
+- GitHub (project documentation and version control)
+
+---
+
+## Project Purpose
+This project demonstrates analytical thinking, data storytelling, and business insight generation using real-world product data. It is intended as a portfolio project for data analyst and business analyst roles.
+
+---
+
+## Future Improvements
+- Add time-based pricing trends (if data becomes available)
+- Incorporate customer segmentation analysis
+- Extend analysis with SQL or Python for scalability
