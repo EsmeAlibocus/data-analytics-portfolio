@@ -1,0 +1,101 @@
+# Supply Chain Risk & Profitability Analysis (SQL)
+
+## Overview
+This project analyses supplier performance by combining profitability metrics
+with operational risk indicators. Using SQL, the analysis identifies suppliers
+that generate above-average gross profit while also presenting elevated quality
+and reliability risks.
+
+The goal is to demonstrate how data analysis can support more informed supply
+chain and sourcing decisions by balancing cost efficiency with operational
+resilience.
+
+---
+
+## Business Problem
+Supply chains often prioritise low cost and high profitability without fully
+accounting for supplier risk. This project explores whether high-profit
+suppliers also introduce quality or reliability concerns that could threaten
+overall supply chain performance.
+
+---
+
+## Dataset
+The dataset contains simulated supply chain data, including:
+- Supplier information
+- Product categories
+- Gross profit
+- Quality inspection results
+- Defect rates
+- On-time delivery indicators
+- Logistics and transportation details
+
+The data was cleaned and prepared for SQL analysis using Excel.
+
+---
+
+## Tools & Technologies
+- **SQL (SQLite)** – core analysis and KPI derivation  
+- **Excel** – data loading, cleaning and preparation  
+- **PowerBi** - Dashboard, visual analysis 
+
+---
+
+## Key Metrics & KPIs
+- Gross Profit
+- On-Time Delivery Rate
+- Quality Pass Rate
+- Defect Rate
+- Supplier Risk Rate (derived dynamically)
+- Perfect Order Rate (On-time AND Quality Pass)
+
+---
+
+## Analysis Approach
+1. Loaded and cleaned the dataset for SQL compatibility  
+2. Derived supplier risk dynamically using inspection results and defect thresholds  
+3. Aggregated profitability and risk metrics at supplier level  
+4. Used `CASE WHEN`, `GROUP BY`, and `HAVING` clauses to identify:
+   - High-profit suppliers
+   - High-risk suppliers
+   - Suppliers that meet both conditions  
+
+---
+
+## Key Insights
+- High profitability does not always correlate with operational reliability.
+- A small subset of suppliers generate above-average gross profit while also
+  exhibiting elevated supplier risk rates.
+- Supplier risk is primarily driven by inspection failures and higher defect
+  rates rather than delivery delays alone.
+
+---
+
+## Recommendations
+- Prioritise suppliers that balance high gross profit with low supplier risk.
+- Conduct quality audits for suppliers with supplier risk rates above 50%.
+- Introduce supplier scorecards combining profitability and operational KPIs
+  to guide sourcing decisions.
+
+---
+
+## Assumptions & Limitations
+- Supplier risk was defined using inspection failures and a defect rate
+  threshold of 3%.
+- The dataset represents historical performance and does not include external
+  disruptions or demand volatility.
+- Results should be validated with live operational data before implementation.
+
+---
+
+## Skills Demonstrated
+- SQL aggregations (`SUM`, `AVG`)
+- `CASE WHEN` logic
+- `GROUP BY` and `HAVING` clauses
+- Subqueries
+- KPI creation and interpretation
+- Translating business problems into analytical solutions
+
+---
+
+
